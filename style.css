@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #87CEFA, #FFB6C1); 
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem; 
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 15px 30px;
+    background: #5F9EA0; 
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #4682B4; 
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background: #f0f0f0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: #e0e0e0;
+}
+
+ul li.checked {
+    color: #888;
+    text-decoration: line-through;
+    background: #d3d3d3; 
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: 2px solid #4682B4; 
+    top: 12px;
+    left: 8px;
+    background-color: transparent; 
+}
+
+ul li.checked::before {
+    content: '\2713'; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    background-color: #4682B4; 
+    border: none; 
+}
+    
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #ff6347; 
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background: #f9f9f9;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+ul li span:hover {
+    background: #ff6347; 
+    color: #fff;
+}
